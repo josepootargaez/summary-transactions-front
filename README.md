@@ -12,8 +12,8 @@
  clone the repository
 
 ### summary-transactions-front
-git clone https://github.com/josepootargaez/summary-transactions-front.git
-cd summary-transactions-front
+    git clone https://github.com/josepootargaez/summary-transactions-front.git
+    cd summary-transactions-front
  ### run the next comands to active the docker container and deploy aplication
     docker build -t  vue-app .
     docker run -p 8080:8080 vue-app

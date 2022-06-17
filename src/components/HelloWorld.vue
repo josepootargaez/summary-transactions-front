@@ -57,15 +57,26 @@ export default {
     
       });
     },
+    clearForm(){
+      this.email="";
+      this.file="";
+    },
     sendCsv(){
       const formData = new FormData();
       formData.append('file', this.file);
       axios
       .post(`http://localhost:8000/transaction?correo=${this.email}`,formData,{headers: { "Content-Type": "multipart/form-data" }})
       .then(response =>{
-        console.log(response);
+        if(response && response.data && response.data.success){
         this.errActive=false;
         this.message="Archivo subido exitosamente";
+        this.clearForm();
+        }
+      }).catch( res=>{
+        this.errActive=true;
+        if(res.response && res.response.status==422 && res.response.statusText){
+          this.message=res.response.statusText;
+        }
       })
     }
   },

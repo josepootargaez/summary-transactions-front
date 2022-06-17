@@ -1,5 +1,5 @@
 # summary-transactions-front
-    Summary Transactions its an SPA to api summary-transactions, it allow uplado file csv and enter email into form
+    Summary Transactions its an SPA to api summary-transactions, it allow upload file csv and enter email into form
 
 ## Technical specifications of the environment
 

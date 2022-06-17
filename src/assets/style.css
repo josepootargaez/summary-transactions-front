@@ -1,0 +1,99 @@
+h3 {
+  margin: 40px 0 0;
+}
+.file-select {
+  position: relative;
+  display: inline-block;
+}
+
+.file-select::before {
+  background-color: #5678EF;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  content: 'Seleccionar'; /* testo por defecto */
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.file-select input[type="file"] {
+  opacity: 0;
+  width: 200px;
+  height: 32px;
+  display: inline-block;
+  cursor: pointer !important;
+}
+
+#src-file1::before {
+  content: 'Seleccionar CSV';
+  cursor:pointer;
+}
+
+.mt-10{
+  margin-top: 10px;
+}
+
+.mt-20{
+  margin-top: 20px;
+}
+*{box-sizing:border-box;}
+
+form{
+	width:350px;
+	padding:16px;
+	border-radius:10px;
+	margin:auto;
+	background-color:#ccc;
+}
+
+form label{
+	width:72px;
+	font-weight:bold;
+	display:inline-block;
+}
+
+form input[type="text"],
+form input[type="email"]{
+	width:180px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
+}
+
+
+form input[type="submit"]:hover{
+	cursor:pointer;
+}
+
+
+.error{
+  color: red;
+}
+.success{
+  color: #108310;
+  font-weight: bold;
+}
+
+.submit{
+  padding: 8px;
+  width: 135px;
+  background: #00FF00;
+  border: none;
+  cursor: pointer;
+}
+.loading-buttuon{
+  pointer-events: none;
+  padding: 8px;
+  width: 135px;
+  background: #00FF00;
+  border: none;
+  opacity: 0.2;
+}
